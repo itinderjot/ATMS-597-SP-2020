@@ -14,3 +14,11 @@ class temp_array():
       return temp_array([x +273.15 for x in self.values],"K")
     if self.units=="C" and TO=="toF":
       return temp_array([x*9.0/5.0 + 32.0 for x in self.values],"F")
+    
+    if self.units=="F" and TO=="toC":
+      #return temp_array([x*9.0/5.0 + 32.0 for x in self.values],"F")
+    if self.units=="F" and TO=="toK":
+      #return temp_array([x +273.15 for x in self.values],"K")
+    if self.units=="F" and TO=="toF":
+      print("Values already in deg C")
+      return self
