@@ -49,11 +49,10 @@ class temp_array():
       print("Values already in deg K")
       return self
     
-    # Following block of code handles output if input unit is Fahrenheit.
-    if self.units == "F" and TO == "toC": # Fahrenheit to Celsius
-      #return temp_array([x * 9.0/5.0 + 32.0 for x in self.values], "F")
-    if self.units == "F" and TO == "toK": # Fahrenheit to Celsius
-      #return temp_array([x + 273.15 for x in self.values], "K")
-    if self.units == "F" and TO == "toF": # Fahrenheit to Fahrenheit
-      print("Values already in deg C")
+    if self.units=="F" and TO=="toC":
+      return temp_array([(x-32.0)*5.0/9.0 for x in self.values],"C")
+    if self.units=="F" and TO=="toK":
+      return temp_array([((x-32.0)*5.0/9.0) + 273.15 for x in self.values],"K")
+    if self.units=="F" and TO=="toF":
+      print("Values already in deg F")
       return self
