@@ -32,7 +32,6 @@ class temp_array():
         if self.units == "C" and TO == "toC": # Celsius to Celsius
             print("Values already in deg C")
             return self
-
         if self.units == "C" and TO == "toK": # Celsius to Kelvin
             return temp_array([x + 273.15 for x in self.values], "K")
         if self.units == "C" and TO == "toF": # Celsius to Fahrenheit
